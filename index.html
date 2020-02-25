@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+       crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="resources/functions.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="resources/stylesheet.css">
+    <title></title>
+  </head>
+  <body class="" style="background-color: #accff1">
+    <div class="jumbotron"  style="background-color: #8cc0f3;">
+      <div class="container">
+        <h1 class="display-3">Generador de Chistes</h1>
+        <p>Por ahora en ingles porque los que armaron los api ponen la excusa que no saben español...</p>
+        <p>Alla ellos, perderan el sueldo....</p>
+      </div>
+    </div>
+    <div class="container-sm border border-dark" style="background-color : #51a1f0;">
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td class="text-center">
+              Selecciona Categoria
+            </td>
+            <td>
+              <div id="categoryWrapper" class="multiselect noselect mx-auto d-block">
+                <div>
+                  <input id="cat-radio1" type="radio" name="catSelect" value="any" >
+                  <label for="cat-radio1">Cualquiera</label>
+                </div>
+                <div class="multiselect noselect">
+                  <input id="cat-radio2" type="radio" name="catSelect" value="multi" >
+                  <label for="cat-radio2">Personalizado</label>
+                  <span id="catSelectMulti">
+                    <input id="cat-cb1" type="checkbox" >
+                    <label for="cat-cb1">Programación</label>
+
+                    <input id="cat-cb2" type="checkbox">
+                    <label for="cat-cb2">Micelaneo</label>
+
+                    <input id="cat-cb3" type="checkbox" >
+                    <label for="cat-cb3">Oscuro</label>
+                  </span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <br>
+          <tr style="height: 66px;">
+            <td class="text-center">
+              Selecciona las flags a bloquear
+            </td>
+            <td>
+              <div class="multiselect noselect mx-auto d-block">
+                (opcional)
+                <input id="blf-cb1" type="checkbox">
+                <label for="blf-cb1">nsfw</label>
+
+                <input id="blf-cb2" type="checkbox" >
+                <label for="blf-cb2">religioso</label>
+
+                <input id="blf-cb3" type="checkbox" >
+                <label for="blf-cb3">politico</label>
+
+                <input id="blf-cb4" type="checkbox" >
+                <label for="blf-cb4">racista</label>
+
+                <input id="blf-cb5" type="checkbox" >
+                <label for="blf-cb5">sexista</label>
+              </div>
+            </td>
+          </tr>
+          <tr style="height: 66px;">
+            <td class="text-center">
+              Selecciona al menos un tipo de chiste
+            </td>
+            <td>
+              <div id="typeSelectWrapper" class="multiselect noselect position-relative">
+                <input id="typ-cb1" type="checkbox" >
+                <label for="typ-cb1">Simple</label>
+
+                <input id="typ-cb2" type="checkbox">
+                <label for="typ-cb2">Dos Partes</label>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <button id="sendRequest" type="button" name="button" class="justify-content-center">Dame un chiste</button>
+      <br>
+      <br>
+      <p id="joke"></p>
+    </div>
+    <br>
+    <br>
+    <div class="container-sm border border-dark" style="background-color : #51a1f0;">
+      <h3 class="text-center">Hola! Benvenute al generador de Chistes</h3>
+      <p class="text-justify">
+        Estas aburrido y no se te ocurren chistes? Queres una fuente de humor negro pero las paginas normies
+        no te dan cosas interesantes? Bueno llegaste al lugar .... bueno, no se si indicado, pero tampoco está tan
+        mal...
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="container-sm border border-dark" style="background-color : #51a1f0;">
+      <h3 class="text-center">Como funciona esto?</h3>
+      <p class="text-justify">
+        este intento de pagina usa la API de <a href="https://sv443.net/jokeapi/v2">JokeApi</a>, el cual contiene
+        una base de datos de mas de 150 chistes de diversos contenidos.
+        Lo unico malo es que está todo en ingles, asi que a retomar el cursito de Open English! Eeeexito!
+      </p>
+    </div>
+    <br>
+    <br>
+    <footer class="container-fluid" style="background-color : #799ec3;">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="text-center">
+            © 2019 Company, Inc. ·
+            <a href="#">Privacy</a>
+            ·
+            <a href="#">Terms</a>
+        </p>
+    </footer>
+  </body>
+
+</html>
